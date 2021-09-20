@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Quizes>
+	<Quiz difficulty="Easy">
+		<Question type="single">Prima intrebare</Question>
+		<Answers>
+			<Answer>Raspuns 1</Answer>
+			<Answer>Raspuns 2</Answer>
+			<Answer correct="true">Raspuns 3</Answer>
+			<Answer>Raspuns 4</Answer>
+			<Answer>Raspuns 5</Answer>
+			<Answer>Raspuns 6</Answer>
+		</Answers>
+	</Quiz>
+	<Quiz difficulty="Easy">
+		<Question type="single">A doua intrebare</Question>
+		<Answers>
+			<Answer correct="true">Raspuns 1</Answer>
+			<Answer>Raspuns 2</Answer>
+			<Answer>Raspuns 3</Answer>
+			<Answer>Raspuns 4</Answer>
+		</Answers>
+	</Quiz>
+	<Quiz difficulty="Easy">
+		<Question type="single">A treia intrebare</Question>
+		<Answers>
+			<Answer>Raspuns 1</Answer>
+			<Answer correct="true">Raspuns 2</Answer>
+			<Answer>Raspuns 3</Answer>
+			<Answer>Raspuns 4</Answer>
+		</Answers>
+	</Quiz>
+	<Quiz difficulty="Easy">
+		<Question type="single">A patra intrebare</Question>
+		<Answers>
+			<Answer correct="true">Raspuns 1</Answer>
+			<Answer>Raspuns 2</Answer>
+			<Answer>Raspuns 4</Answer>
+		</Answers>
+	</Quiz>
+	<Quiz difficulty="Medium">
+		<Question type="multiple">A cincea intrebare</Question>
+		<Answers>
+			<Answer correct="true">Raspuns 1</Answer>
+			<Answer>Raspuns 2</Answer>
+			<Answer correct="true">Raspuns 4</Answer>
+		</Answers>
+	</Quiz>
+	<Quiz difficulty="Medium">
+		<Question type="single">A sasea intrebare</Question>
+		<Answers>
+			<Answer>Raspuns 1</Answer>
+			<Answer correct="true">Raspuns 2</Answer>
+		</Answers>
+	</Quiz>
+	<Quiz difficulty="Medium">
+		<Question type="multiple">A saptea intrebare</Question>
+		<Answers>
+			<Answer correct="true">Raspuns 1</Answer>
+			<Answer correct="true">Raspuns 2</Answer>
+			<Answer correct="true">Raspuns 3</Answer>
+			<Answer>Raspuns 4</Answer>
+		</Answers>
+	</Quiz>
+	<Quiz difficulty="Hard">
+		<Question type="multiple">A opta intrebare</Question>
+		<Answers>
+			<Answer>Raspuns 1</Answer>
+			<Answer>Raspuns 2</Answer>
+			<Answer correct="true">Raspuns 3</Answer>
+			<Answer correct="true">Raspuns 4</Answer>
+		</Answers>
+	</Quiz>
+	<Quiz difficulty="Hard">
+		<Question type="multiple">A noua intrebare</Question>
+		<Answers>
+			<Answer correct="true">Raspuns 1</Answer>
+			<Answer>Raspuns 2</Answer>
+			<Answer correct="true">Raspuns 3</Answer>
+			<Answer>Raspuns 4</Answer>
+		</Answers>
+	</Quiz>
+	<Quiz difficulty="Medium">
+		<Question type="multiple">A zecea intrebare</Question>
+		<Answers>
+			<Answer correct="true">Raspuns 1</Answer>
+			<Answer correct="true">Raspuns 2</Answer>
+			<Answer correct="true">Raspuns 3</Answer>
+			<Answer correct="true">Raspuns 4</Answer>
+			<Answer>Raspuns 5</Answer>
+		</Answers>
+	</Quiz>
+</Quizes>

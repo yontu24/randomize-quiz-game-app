@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="WpfQuizApp.Views.ChooseAnswerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfQuizApp.Views"
+        mc:Ignorable="d"
+        Height="450" Width="800"
+             Background="White"
+             FontFamily="Verdana">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="CheckQuestion">
+            <ItemsControl ItemsSource="{Binding Answers}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Margin="10" Background="LightGreen" IsChecked="{Binding IsSelected, Mode=TwoWay}">
+                            <TextBlock Text="{Binding Answer}"  Background="#E9ECEB"/>
+                        </CheckBox>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </DataTemplate>
+        <DataTemplate x:Key="RadioQuestion">
+            <ItemsControl ItemsSource="{Binding Answers}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <RadioButton Margin="10" IsChecked="{Binding IsSelected, Mode=TwoWay}" Background="LightGreen" GroupName="{Binding RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}">
+                            <TextBlock Text="{Binding Answer}" Background="#E9ECEB"/>
+                        </RadioButton>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <StackPanel>
+        <ItemsControl ItemsSource="{Binding Quizes}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Margin="0,10,0,0" Text="{Binding Question}" FontSize="20pt" HorizontalAlignment="Center"/>
+                        <ContentControl x:Name="QuestionAnswers" Content="{Binding}" Margin="10"/>
+                    </StackPanel>
+                    <DataTemplate.Triggers>
+                        <DataTrigger Binding="{Binding Type}" Value="Check">
+                            <Setter TargetName="QuestionAnswers" Property="ContentTemplate" Value="{StaticResource CheckQuestion}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Type}" Value="Radio">
+                            <Setter TargetName="QuestionAnswers" Property="ContentTemplate" Value="{StaticResource RadioQuestion}"/>
+                        </DataTrigger>
+                    </DataTemplate.Triggers>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Button Name="StartGame" Content="{Binding ButtonContent}"
+                Margin="10,10,10,10"
+                Width="150"
+                Height="25"
+                HorizontalAlignment="Center"
+                Command="{Binding CommandNextQuestion}"/>
+    </StackPanel>
+</UserControl>
